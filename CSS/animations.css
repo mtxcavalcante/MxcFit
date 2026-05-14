@@ -1,0 +1,236 @@
+
+
+/* ── HERO BANNER — entrada animada ── */
+.banner {
+  overflow: hidden;
+}
+
+.banner img {
+  animation: heroReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.06) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── HEADER — fade in ao carregar ── */
+header {
+  animation: fadeDown 0.7s ease both;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── PULSE no botão do header ── */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0    rgba(224, 74, 4, 0.65); }
+  70%  { box-shadow: 0 0 0 12px rgba(224, 74, 4, 0); }
+  100% { box-shadow: 0 0 0 0    rgba(224, 74, 4, 0); }
+}
+
+header .button {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+header .button-inicial {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+header .button:hover {
+  animation: none;
+}
+
+/* ── NAV LINKS — underline animado ── */
+.navbar-items a {
+  position: relative;
+}
+
+.navbar-items a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #e04a04;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navbar-items a:hover::after {
+  width: 100%;
+}
+
+/* ── CARDS DE UNIDADE — hover aprimorado ── */
+.card-gym {
+  transition:
+    background-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card-gym:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-gym img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-gym:hover img {
+  transform: scale(1.06);
+}
+
+/* ── CARDS DE MODALIDADES ── */
+.card-modalites {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+}
+
+.card-modalites:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(224, 74, 4, 0.3);
+}
+
+/* overlay laranja no hover */
+.card-modal {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-modal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(224, 74, 4, 0.5));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card-modalites:hover .card-modal::after {
+  opacity: 1;
+}
+
+.card-modalites img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-modalites:hover img {
+  transform: scale(1.08);
+}
+
+/* ── CARDS DE BENEFÍCIOS ── */
+.card-benefits {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-benefits:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(224, 74, 4, 0.22);
+}
+
+.card-image {
+  overflow: hidden;
+}
+
+.card-benefits img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.card-benefits:hover img {
+  transform: scale(1.08) !important;
+}
+
+/* ── CARDS DE PLANOS ── */
+.card-plan {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card-plan:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(224, 74, 4, 0.25);
+}
+
+
+/* Badge "Mais Popular" no plano do meio */
+.card-plan:nth-child(2) {
+  position: relative;
+}
+
+.card-plan:nth-child(2)::before {
+  content: '⭐ Mais Popular';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #e04a04, #ff7043);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(224, 74, 4, 0.45);
+  animation: badgePop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
+}
+
+@keyframes badgePop {
+  from { transform: translateX(-50%) scale(0); opacity: 0; }
+  to   { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+/* ── TÍTULOS — entrada ao carregar ── */
+.title-area,
+.title-area-modalites,
+.title-area-benefits,
+.title-plans {
+  animation: slideInLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── CARDS — stagger de entrada ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Unidades */
+.gym-container .card-gym:nth-child(1) { animation: fadeUp 0.6s ease 0.1s both; }
+.gym-container .card-gym:nth-child(2) { animation: fadeUp 0.6s ease 0.2s both; }
+.gym-container .card-gym:nth-child(3) { animation: fadeUp 0.6s ease 0.3s both; }
+.gym-container .card-gym:nth-child(4) { animation: fadeUp 0.6s ease 0.4s both; }
+.gym-container .card-gym:nth-child(5) { animation: fadeUp 0.6s ease 0.5s both; }
+
+/* Modalidades */
+.modalites-container .card-modalites:nth-child(1) { animation: fadeUp 0.6s ease 0.1s both; }
+.modalites-container .card-modalites:nth-child(2) { animation: fadeUp 0.6s ease 0.2s both; }
+.modalites-container .card-modalites:nth-child(3) { animation: fadeUp 0.6s ease 0.3s both; }
+.modalites-container .card-modalites:nth-child(4) { animation: fadeUp 0.6s ease 0.4s both; }
+
+/* Benefícios */
+.benefits-container .card-benefits:nth-child(1) { animation: fadeUp 0.6s ease 0.1s both; }
+.benefits-container .card-benefits:nth-child(2) { animation: fadeUp 0.6s ease 0.2s both; }
+.benefits-container .card-benefits:nth-child(3) { animation: fadeUp 0.6s ease 0.3s both; }
+.benefits-container .card-benefits:nth-child(4) { animation: fadeUp 0.6s ease 0.4s both; }
+
+/* ── FOOTER ── */
+.main-footer .footer-logo { animation: fadeUp 0.8s ease 0.2s both; }
+.app-buttons              { animation: fadeUp 0.8s ease 0.4s both; }
