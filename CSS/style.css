@@ -51,6 +51,48 @@ button {
     scale: 1.1 1; 
 }
 
+.button-plan{
+    padding: 15px 20px;
+    border: 1px solid #7d7d7d ;
+    color: #ff5405;
+    border-radius: 5px;
+}
+
+.button-plan:hover {
+    background-color: #fff;
+    color: #000000;
+    scale: 1.1 1; 
+}
+
+
+-webkit-scrollbar {
+  width: 8px;
+}
+ 
+/* ── TRILHA (fundo) ── */
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+ 
+/* ── BARRA (thumb) ── */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #e04a04, #ff7043);
+  border-radius: 999px;
+  border: 2px solid #0d0d0d; /* "respiro" entre a barra e a trilha */
+  transition: background 0.3s ease;
+}
+ 
+/* ── HOVER NA BARRA ── */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff7043, #e04a04);
+}
+ 
+/* ── FIREFOX (suporte limitado, mas funciona) ── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e04a04 #0d0d0d;
+}
+
 
 header {
     display: flex;
@@ -142,7 +184,7 @@ display: flex;
 flex-flow: row wrap;
 align-items: flex-start;
 justify-content: center;
- background-color: #ffffff;
+ background-color: transparent;
  border-radius: 12px;
  overflow: hidden;
 }
@@ -155,6 +197,8 @@ justify-content: center;
   align-items: flex-start;
   justify-content: center;
   gap: 15px;
+   background-color: #ececec;
+   border-radius: 12px;
 }
 
 .card-gym img {
@@ -269,7 +313,7 @@ scale: 1.1;
 /* modalites */
 
 .modalites-sections {
-background-color: #ececec;
+background-color: #ffffff;
 width: 100%;
 padding: 40px 0;
 display: flex;
@@ -795,32 +839,3 @@ display: flex;
 }
 .footer-text { font-size: 11px; color: #9ca3af; }
 .footer-text strong { color: #e63946; }
-
-
--webkit-scrollbar {
-  width: 8px;
-}
- 
-/* ── TRILHA (fundo) ── */
-::-webkit-scrollbar-track {
-  background: #0d0d0d;
-}
- 
-/* ── BARRA (thumb) ── */
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #e04a04, #ff7043);
-  border-radius: 999px;
-  border: 2px solid #0d0d0d; /* "respiro" entre a barra e a trilha */
-  transition: background 0.3s ease;
-}
- 
-/* ── HOVER NA BARRA ── */
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff7043, #e04a04);
-}
- 
-/* ── FIREFOX (suporte limitado, mas funciona) ── */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #e04a04 #0d0d0d;
-}
