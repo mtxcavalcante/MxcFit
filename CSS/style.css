@@ -87,7 +87,7 @@ button {
   background: linear-gradient(180deg, #ff7043, #e04a04);
 }
  
-/* ── FIREFOX (suporte limitado, mas funciona) ── */
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #e04a04 #0d0d0d;
@@ -177,6 +177,27 @@ gap: 10px;
     font-size: 30px;
     text-align: center;
     color: #000000;
+}
+
+.title-area h2 {
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.title-area h2::after {
+  content: '';
+  display: block;
+  width: 62px;
+  height: 4px;
+  background: #e04a04;
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.title-area p {
+  color: #888;
+  font-size: 30px;
+  font-family: ;
 }
 
 .gym-container {
@@ -325,6 +346,25 @@ justify-content: center;
 .title-area-modalites {
     font-size: 30px;
     text-align: center;
+}
+
+.title-area-modalites h1 {
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.title-area-modalites h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e04a04;
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.title-area-modalites p {
+  color: #888;
 }
 
 .modalites-container {
