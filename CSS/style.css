@@ -194,11 +194,7 @@ gap: 10px;
   margin: 12px auto 0;
 }
 
-.title-area p {
-  color: #888;
-  font-size: 30px;
-  font-family: ;
-}
+
 
 .gym-container {
 display: flex;
@@ -363,9 +359,6 @@ justify-content: center;
   margin: 12px auto 0;
 }
 
-.title-area-modalites p {
-  color: #888;
-}
 
 .modalites-container {
     padding: 40px  0;
