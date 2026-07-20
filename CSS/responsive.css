@@ -1,0 +1,184 @@
+/* ================================
+   MxcFit — Responsividade
+
+
+/* ── TABLET (≤ 900px) ─────────────────── */
+@media (max-width: 900px) {
+
+  .logo { width: 150px; }
+
+  .navbar-items { gap: 10px; }
+  .navbar-items li { margin: 8px 2px; }
+
+  .banner img { height: 400px; object-fit: cover; }
+
+  .card-gym { width: 320px; }
+  .card-benefits { width: 200px; }
+  .card-modalites { width: 200px; }
+  .card-plan { width: 280px; }
+}
+
+
+/* ── MOBILE (≤ 650px) ─────────────────── */
+@media (max-width: 650px) {
+
+  /* Header */
+  header {
+    padding: 0 16px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .logo { width: 130px; }
+
+  /* Esconde nav e botão de matricula */
+  nav { display: none; }
+  .button-inicial { display: none; }
+
+  /* Botão hamburguer */
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+  }
+
+  .hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animação hamburguer → X */
+  .hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: #e04a04; }
+  .hamburger-btn.open span:nth-child(2) { opacity: 0; }
+  .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #e04a04; }
+
+  /* Menu dropdown mobile */
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111;
+    padding: 8px 0 16px;
+    gap: 0;
+    border-top: 1px solid #222;
+  }
+
+  .navbar-items.open { display: flex; }
+
+  .navbar-items li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #1e1e1e;
+  }
+
+  .navbar-items a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  /* Banner */
+  .banner { padding-top: 60px; }
+  .banner img { height: 220px; object-fit: cover; }
+
+  /* Títulos */
+  .title-area    { font-size: 20px; }
+  .title-area-modalites { font-size: 20px; }
+  .title-area-benefits  { font-size: 20px; }
+  .title-plans   { font-size: 20px; }
+
+  /* Seções */
+  .gym-section        { padding: 30px 12px; }
+  .modalites-sections { padding: 30px 12px; }
+  .benefits-sections  { padding: 30px 12px; }
+  .plans-sections     { padding: 30px 12px; gap: 40px; }
+
+  /* Cards Unidades */
+  .gym-container { padding: 12px; gap: 12px; }
+
+  .card-gym {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .card-gym img { height: 180px; }
+
+  /* Cards Modalidades */
+  .modalites-container { padding: 20px 0; gap: 16px; }
+
+  .card-modalites { width: 100%; max-width: 480px; }
+
+  .card-modal {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .card-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Cards Benefícios */
+  .benefits-container { padding: 20px 0; gap: 16px; }
+
+  .card-benefits { width: 100%; max-width: 480px; }
+
+  .card-image { height: 200px; }
+
+  /* Cards Planos */
+  .plans-container { padding: 20px 0; gap: 55px; }
+
+  .card-plan {
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    padding-top: 65px;
+  }
+
+  .plan-price { font-size: 42px; }
+
+  .inclinado {
+    width: 80px;
+    height: 80px;
+    font-size: 46px;
+    top: -42px;
+  }
+
+  /* Footer */
+  .main-footer { padding: 2rem 16px 0; }
+  .footer-logo { width: 130px; }
+
+  .app-buttons {
+    flex-direction: column;
+  }
+
+  .app-buttons a:first-child {
+    border-right: none;
+    border-bottom: 1px solid #555;
+  }
+
+  .footer-bottom { font-size: 0.8rem; }
+
+  /* Chat popup */
+  .popup-panel {
+    width: calc(100vw - 24px);
+    right: 12px;
+    bottom: 82px;
+  }
+
+  .chat-launcher { bottom: 18px; right: 18px; }
+}
