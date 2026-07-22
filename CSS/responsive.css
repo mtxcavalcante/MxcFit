@@ -1,8 +1,8 @@
-/* ================================
+/*  
    MxcFit — Responsividade
 
 
-/* ── TABLET (≤ 900px) ─────────────────── */
+/* TABLET (≤ 900px) */
 @media (max-width: 900px) {
 
   .logo { width: 150px; }
@@ -19,7 +19,7 @@
 }
 
 
-/* ── MOBILE (≤ 650px) ─────────────────── */
+/* MOBILE (≤ 650px) */
 @media (max-width: 650px) {
 
   /* Header */
