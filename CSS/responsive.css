@@ -1,14 +1,16 @@
-/*  
-   MxcFit — Responsividade
+/* Responsive */
 
+.hamburger-btn {
+  display: none;
+}
 
 /* TABLET (≤ 900px) */
 @media (max-width: 900px) {
 
   .logo { width: 150px; }
 
-  .navbar-items { gap: 10px; }
-  .navbar-items li { margin: 8px 2px; }
+  #navbar-items { gap: 10px; }
+  #navbar-items li { margin: 8px 2px; }
 
   .banner img { height: 400px; object-fit: cover; }
 
@@ -32,7 +34,7 @@
   .logo { width: 130px; }
 
   /* Esconde nav e botão de matricula */
-  nav { display: none; }
+  /* nav { display: none; } */
   .button-inicial { display: none; }
 
   /* Botão hamburguer */
@@ -62,7 +64,7 @@
   .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #e04a04; }
 
   /* Menu dropdown mobile */
-  .navbar-items {
+  #navbar-items {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -72,16 +74,19 @@
     border-top: 1px solid #222;
   }
 
-  .navbar-items.open { display: flex; }
+  #navbar-items.open { display: flex ;
+    position: fixed; top: 100px;
+  left: 0;
+ }
 
-  .navbar-items li {
+  #navbar-items li {
     width: 100%;
     margin: 0;
     padding: 0;
     border-bottom: 1px solid #1e1e1e;
   }
 
-  .navbar-items a {
+  #navbar-items a {
     display: block;
     padding: 14px 20px;
     font-size: 15px;

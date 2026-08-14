@@ -121,24 +121,24 @@ position: relative;
     width: 200px;
 }
 
-.navbar-items {
+#navbar-items {
     display: flex;
     flex-flow: row;
     gap: 30px;
 }
 
-.navbar-items li {
+#navbar-items li {
 display: inline-block;
 text-transform: uppercase;
 /* margin: 10px; */
 }
 
-.navbar-items a {
+#navbar-items a {
     color: #fcfcfc;
     text-decoration: none;
 }
 
-.navbar-items a:hover {
+#navbar-items a:hover {
     color: var(--cor-academia);
 }
 
